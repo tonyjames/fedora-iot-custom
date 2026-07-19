@@ -1,0 +1,8 @@
+{
+  "packages": [
+    "man-db",
+    "nfs-utils",
+    "tuned",
+    "wget"
+  ]
+}
