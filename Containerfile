@@ -1,3 +1,7 @@
+FROM scratch as shared
+
+COPY / /
+
 FROM quay.io/fedora/fedora-iot:44
 
 RUN --mount=type=bind,from=shared,src=/,dst=/shared \
