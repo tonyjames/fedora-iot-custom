@@ -7,10 +7,6 @@ on:
     - cron: '00 1 * * mon'
   workflow_dispatch:
 
-permissions:
-  contents: read
-  packages: write
-
 jobs:
   build_container:
     runs-on: ubuntu-24.04
@@ -24,7 +20,7 @@ jobs:
         with:
           containerfiles: |
             ./Containerfile
-          image: ${{ github.repository_owner }}/${{ github.event.repository.name }}
+          image: ${{ github.event.repository.name }}
           tags: latest
 
       - name: Log in to GitHub container registry
