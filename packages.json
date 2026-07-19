@@ -1,5 +1,6 @@
 {
   "packages": [
+    "avahi",
     "man-db",
     "nfs-utils",
     "tuned",
