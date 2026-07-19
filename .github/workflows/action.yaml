@@ -24,7 +24,7 @@ jobs:
         with:
           containerfiles: |
             ./Containerfile
-          image: fedora-iot-custom
+          image: ${{ github.repository_owner }}/${{ github.event.repository.name }}
           tags: latest
 
       - name: Log in to GitHub container registry
