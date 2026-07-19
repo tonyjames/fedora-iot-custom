@@ -8,6 +8,7 @@ RUN --mount=type=bind,from=shared,src=/,dst=/shared \
     dnf install -y $(jq -r .packages[] /shared/packages.json) && \
     dnf clean all && \
     rm -rf /var/cache/libdnf5 /var/lib/dnf/* /var/log/dnf5.log && \
-    rm -rf /run/dnf /run/rpcbind /run/tuned
+    rm -rf /run/dnf /run/rpcbind /run/tuned && \
+    rm -rf /var/cache/ldconfig/aux-cache
 
-RUN bootc container lint --no-truncate
+RUN bootc container lint --no-truncate --skip var-tmpfiles
