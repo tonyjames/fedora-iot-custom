@@ -1,6 +1,7 @@
 {
   "packages": [
     "avahi",
+    "distrobox",
     "man-db",
     "nfs-utils",
     "tuned",
